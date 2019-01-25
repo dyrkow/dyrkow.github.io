@@ -1,4 +1,3 @@
-
 // Get date in Year-Month-Day format
 var getYMD = function () {
     var date = new Date();
