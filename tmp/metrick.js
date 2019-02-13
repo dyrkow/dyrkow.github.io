@@ -1,3 +1,4 @@
+
 // Get date in Year-Month-Day format
 var getYMD = function () {
     var date = new Date();
@@ -62,7 +63,7 @@ var getMonthYearFromYMD = function(date){
 
 /*
 
-Чтобы получить токен нужно перейти по адресу 1.
+Чтобы получить токен нужно перейти по адресу
 1. https://oauth.yandex.ru/authorize?response_type=token&client_id=3529087045d74b8bb5ff6a97e6cd72fe
 */
 
@@ -83,8 +84,8 @@ var API = function () {
         var date = getYMD()
 
         $.ajax({
-            // url: this.baseUrl + '?date1=2017-09-14&date2=2018-09-13&filters=ym:s:datePeriodMonth!n&attrubution=Last&sort=ym:s:datePeriodmonth&group=month&auto_group_size=1&dimensions=ym:s:datePeriodmonth&metrics=ym:s:visits, ym:s:users, ym:s:pageviews, ym:s:percentNewVisitors, ym:s:bounceRate, ym:s:pageDepth, ym:s:avgVisitDurationSeconds&' + authUrl,
-            url: this.baseUrl + '?date1='+ date.minusYear().text +'&date2='+ date.text +'&filters=ym:s:datePeriodMonth!n&attrubution=Last&sort=ym:s:datePeriodmonth&group=month&auto_group_size=1&dimensions=ym:s:datePeriodmonth&metrics=ym:s:visits, ym:s:users, ym:s:pageviews, ym:s:percentNewVisitors, ym:s:bounceRate, ym:s:pageDepth, ym:s:avgVisitDurationSeconds&' + authUrl,
+            // url: this.baseUrl + '?date1='+ date.minusYear().text +'&date2='+ date.text +'&filters=ym:s:datePeriodMonth!n&attrubution=Last&sort=ym:s:datePeriodmonth&group=month&auto_group_size=1&dimensions=ym:s:datePeriodmonth&metrics=ym:s:visits, ym:s:users, ym:s:pageviews, ym:s:percentNewVisitors, ym:s:bounceRate, ym:s:pageDepth, ym:s:avgVisitDurationSeconds&' + authUrl,
+            url: `${this.baseUrl}?attribution=Last&filters=ym:s:datePeriodday!n&sort=ym:s:datePeriodmonth&dimensions=ym:s:datePeriodmonth&metrics=ym:s:users&date1=${date.minusYear().text}&date2=${date.text}&${authUrl}`,
             method: this.method,
             dataType: "jsonp",
         })
@@ -101,7 +102,7 @@ var API = function () {
 
         $.ajax({
             // url: this.baseUrl + '?dimensions=ym:s:datePeriodday&metrics=ym:s:visits, ym:s:users, ym:s:pageviews, ym:s:percentNewVisitors, ym:s:bounceRate, ym:s:pageDepth, ym:s:avgVisitDurationSeconds&sort=ym:s:datePeriodday&date1=2018-08-14&date2=2018-09-13&filters=ym:s:datePeriodday!n&attribution=Last&group=day&auto_group_size=1&auto_group_type=day&' + authUrl,
-            url: this.baseUrl + '?date1='+ date.minusMonth().text +'&date2='+ date.text +'&dimensions=ym:s:datePeriodday&metrics=ym:s:visits, ym:s:users, ym:s:pageviews, ym:s:percentNewVisitors, ym:s:bounceRate, ym:s:pageDepth, ym:s:avgVisitDurationSeconds&sort=ym:s:datePeriodday&&filters=ym:s:datePeriodday!n&attribution=Last&group=day&auto_group_size=1&auto_group_type=day&' + authUrl,
+            url: this.baseUrl + '?date1='+ date.minusMonth().text +'&date2='+ date.text +'&dimensions=ym:s:datePeriodday&metrics=ym:s:users&sort=ym:s:datePeriodday&filters=ym:s:datePeriodday!n&attribution=Last&group=day&auto_group_size=1&auto_group_type=day&' + authUrl,
             method: this.method,
             dataType: "jsonp",
         })
