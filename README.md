@@ -9,4 +9,4 @@
 `rsync -r dir dir2`
 синхронизирует папки создав иеархию `dir2/dir`
 
-`rsync -anv -e "ssh -p 4122" test/ root@ip:/var/www/admin/site.rf/testsshdir`
+`rsync -aP -e "ssh -p 4122" test/ root@ip:/var/www/admin/www/site.rf/testsshdir`
