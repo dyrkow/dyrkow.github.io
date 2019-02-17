@@ -1,0 +1,16 @@
+image: monachus/hugo:latest
+
+stages:
+- deploy
+
+deploy:
+  stage: deploy
+  only:
+  - master
+  when: manual 
+  before_script:
+  - apt-get update
+  - apt-get --yes --force-yes install rsync
+  script:
+  - echo "Start deploy to server"
+  - rsync --version
