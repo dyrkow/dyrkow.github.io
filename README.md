@@ -1,1 +1,7 @@
-Настанет день... и я что-то да и сделаю тут :)
+### Monorepo
+
+1. Create project folder
+```
+mkdir monorepo
+cd monorepo
+```
