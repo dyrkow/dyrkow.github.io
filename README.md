@@ -25,4 +25,9 @@ cd monorepo
 
 
 
+<a href="https://prostovkusnovyksa.ru/cafe/view?id=2">/cafe/view?id=2</a>
+
+
+
+
 <a href="https://prostovkusnovyksa.ru">/</a>
