@@ -1,6 +1,8 @@
-document
-    .getElementById('button')
-    .addEventListener('click', console.log);
+const button = document.getElementById('button');
+
+button.addEventListener('click', () => {
+    button.textContent = 'Worked!'
+});
 
 addEventListener('load', async () => {
     if ('serviceWorker' in navigator) {
