@@ -6,7 +6,10 @@ button.addEventListener('click', () => {
 
 localStorage.setItem('session', Date.now())
 
-addEventListener('storage', () => window.close())
+addEventListener('storage', () => {
+    console.log('close window')
+    window.close()
+})
 
 addEventListener('load', async () => {
     if ('serviceWorker' in navigator) {
