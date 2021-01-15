@@ -4,6 +4,10 @@ button.addEventListener('click', () => {
     button.textContent = 'Worked!'
 });
 
+localStorage.setItem('session', Date.now())
+
+addEventListener('storage', () => window.close())
+
 addEventListener('load', async () => {
     if ('serviceWorker' in navigator) {
         try {
