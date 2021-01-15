@@ -2,7 +2,7 @@
   "name": "WWD",
   "short_name": "WebWorkDeveloper",
   "start_url": "/",
-  "display": "standalone",
+  "display": "fullscreen",
   "background_color": "#2A3443",
   "description": "Demo application",
   "theme_color": "#2A3443",
