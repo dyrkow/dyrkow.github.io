@@ -5,32 +5,105 @@
     <link rel="manifest" href="./manifest.json" />
     <title>DYRKOW</title>
     <style>
-        body {
-            background: black;
-            color: white;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #1b1b1b;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        width: 100vw;
+        height: 100vh;
+      }
+      h1 {
+        font-size: 150px;
+      }
+      h3 {
+        margin-top: 100px;
+        color: white;
+      }
+      .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        text-align: center;
+        font-family: sans-serif;
+      }
+      .picture {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .mondala1 {
+        margin-left: -600px;
+        margin-top: -600px;
+        animation: rotating 15s linear infinite;
+      }
+      .mondala2 {
+        margin-left: -500px;
+        margin-top: -500px;
+        animation: reversing 60s linear infinite;
+      }
+      .mondala3 {
+        margin-left: -375px;
+        margin-top: -375px;
+        animation: rotating 40s linear infinite;
+      }
+      .mondala4 {
+        margin-left: -250px;
+        margin-top: -250px;
+        animation: reversing 60s linear infinite;
+      }
+      .mondala5 {
+        margin-left: -125px;
+        margin-top: -125px;
+        animation: rotating 15s linear infinite;
+      }
+      .picture img {
+        user-select: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+      @keyframes rotating {
+        to {
+          transform: rotate(360deg);
         }
-        h1 {
-          font-size: 150px;
+      }
+      @keyframes reversing {
+        to {
+          transform: rotate(-360deg);
         }
-        h3 {
-          margin-top: 100px;
-          color: white;
-        }
-        .center {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translateY(-50%) translateX(-50%);
-          text-align: center;
-          font-family: sans-serif;
-        }
+      }
+      .github:hover img {
+        transform: scale(1.2);
+      }
+      .github img {
+        transition: all .2s ease-in-out;
+        width: 100px;
+      }
     </style>
   </head>
   <body>
+    <picture class="picture center">
+      <img class="mondala1" src="./mandala1.svg" />
+      <img class="mondala2" src="./mandala2.svg" />
+      <img class="mondala3" src="./mandala3.svg" />
+      <img class="mondala4" src="./mandala4.svg" />
+      <img class="mondala5" src="./mandala5.svg" />
+    </picture>
     <div class="center">
-        <h1>DYRKOW</h1>
-        <h2>FRONT-END DEVELOPER</h2>
-        <h3><a href="https://github.com/dyrkow">github</a></h3>
+      <h1>DYRKOW</h1>
+      <h2>FRONT-END DEVELOPER</h2>
+      <h3>
+        <a class="github" href="https://github.com/dyrkow"
+          ><img alt="github" src="./github.png"
+        /></a>
+      </h3>
     </div>
   </body>
 </html>
